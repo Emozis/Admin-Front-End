@@ -40,4 +40,40 @@ document.querySelectorAll(".category-item").forEach((item) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".character-table tbody tr").forEach((row) => {
+    row.addEventListener("click", () => {
+      const characterId = row.querySelector("td:first-child").textContent; // No 값 가져오기
+      const targetUrl = `/admin/character/characterDetail.html`;
+      
+      window.location.href = targetUrl;
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".image-table tbody tr").forEach((row) => {
+    row.addEventListener("click", () => {
+      const characterId = row.querySelector("td:first-child").textContent; // No 값 가져오기
+      const targetUrl = `/admin/character/imageDetail.html`;
+      
+      window.location.href = targetUrl;
+    });
+  });
+});
 
+//버전 import
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/admin/header/version.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch version.html");
+      }
+      return response.text();
+    })
+    .then((html) => {
+      document.getElementById("version-container").innerHTML = html;
+    })
+    .catch((error) => {
+      console.error("Error loading version.html:", error);
+    });
+});

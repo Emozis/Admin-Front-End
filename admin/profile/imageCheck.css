@@ -20,7 +20,7 @@ body{
     display: flex;
     align-items: center;
   }
-  
+
   .category ul {
     display: flex;
     gap: 70px;
@@ -50,71 +50,46 @@ body{
     width: 100%;
     background-color: #8A2BE2;
   }
-  
-  /*테이블 css*/
-  .table-container {
-    padding: 20px 162px;
-  }
-  
-  .character-table, .image-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-  .character-table th,
-  .character-table td,
-  .image-table th,
-  .image-table td {
-    padding: 30px 5px;
-  }
-  
-  .character-table th,
-  .image-table th {
-    border: none;
-    color: #2c2c2c;
-    font-weight: 400;
-  }
-
-  .character-table td,
-  .image-table td{
-    border-bottom: 1px solid #c7c7c7;
-    background-color: #fff;
-  }
-  
-  
-  .character-table img,
-  .image-table img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .deleteBtn{
-    cursor: pointer;
-    background-color: #8A2BE2;
-    color: #fff;
-    border: none;
-    padding: 5px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-  .addFile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #preview{
-    border: none;
-    margin-right: 10px;
-  }
   .sub-header{
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
+
+.image-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 162px;
+  }
+
+  .image-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .image-item h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .image-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
   .createBtn{
     cursor: pointer;
     background-color: #8A2BE2;
@@ -124,3 +99,4 @@ body{
     font-size: 16px;
     border-radius: 5px;
   }
+  

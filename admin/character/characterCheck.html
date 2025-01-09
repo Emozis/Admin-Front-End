@@ -9,16 +9,11 @@
   <body>
     <div id="header-container"></div>
     <div class="category">
-      <ul>
+      <ul class="sub-header">
         <li class="category-item active" data-link="characterCheck.html">
           캐릭터 조회
         </li>
-        <li class="category-item" data-link="characterCreate.html">
-          캐릭터 생성
-        </li>
-        <li class="category-item" data-link="characterModify.html">
-          캐릭터 수정/삭제
-        </li>
+        <li class="category-item"><button class="createBtn">캐릭터 생성</button></li>
       </ul>
     </div>
 
@@ -63,7 +58,7 @@
         </tbody>
       </table>
     </div>
-
+    <div id="version-container"></div>
     <script src="/admin/character/character.js"></script>
   </body>
 </html>
