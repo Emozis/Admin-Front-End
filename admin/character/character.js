@@ -7,7 +7,7 @@ fetch("/admin/header/header.html")
     const menuItems = document.querySelectorAll(".menu-item");
     const currentPath = window.location.pathname;
 
-    menuItems.forEach(item => {
+    menuItems.forEach((item) => {
       let link = item.getAttribute("data-link");
 
       if (currentPath.startsWith(link)) {
@@ -43,19 +43,18 @@ document.querySelectorAll(".category-item").forEach((item) => {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".character-table tbody tr").forEach((row) => {
     row.addEventListener("click", () => {
-      const characterId = row.querySelector("td:first-child").textContent; // No 값 가져오기
+      const characterId = row.querySelector("td:first-child").textContent;
       const targetUrl = `/admin/character/characterDetail.html`;
-      
+
       window.location.href = targetUrl;
     });
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".image-table tbody tr").forEach((row) => {
-    row.addEventListener("click", () => {
-      const characterId = row.querySelector("td:first-child").textContent; // No 값 가져오기
-      const targetUrl = `/admin/character/imageDetail.html`;
-      
+  document.querySelectorAll(".image-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const targetUrl = "/admin/profile/imageDetail.html";
       window.location.href = targetUrl;
     });
   });
@@ -76,4 +75,41 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => {
       console.error("Error loading version.html:", error);
     });
+});
+
+//이미지 미리보기
+document.addEventListener("DOMContentLoaded", () => {
+  const imageUpload = document.getElementById("image-upload");
+  const previewImage = document.getElementById("preview-image");
+
+  imageUpload.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = (e) => {
+        previewImage.src = e.target.result;
+        previewImage.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      previewImage.style.display = "none";
+    }
+  });
+});
+
+//캐릭터생성
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("createChar").addEventListener("click", () => {
+    const targetUrl = "/admin/character/characterCreate.html";
+    window.location.href = targetUrl;
+  });
+});
+
+//이미지생성
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("createImg").addEventListener("click", () => {
+    const targetUrl = "/admin/profile/imageCreate.html";
+    window.location.href = targetUrl;
+  });
 });

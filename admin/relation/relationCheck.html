@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/admin/relation/relationCheck.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <div class="category">
+      <ul class="sub-header">
+        <li class="category-item active" data-link="characterCheck.html">
+          캐릭터 조회
+        </li>
+        <li class="category-item"><button class="createBtn">관계 생성</button></li>
+      </ul>
+    </div>
+
+    <div class="table-container">
+      <table class="relation-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>이름</th>
+            <th>관계</th>
+            <th>수정</th>
+            <th>삭제</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>뽀로로</td>
+            <td><input type="text" class="relation-info" disabled></td>
+            <td><button class="modifyBtn">수정</button></td>
+            <td><button class="deleteBtn">삭제</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>뽀로로클론2</td>
+            <td><input type="text" class="relation-info" disabled></td>
+            <td><button class="modifyBtn">수정</button></td>
+            <td><button class="deleteBtn">삭제</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="version-container"></div>
+    <script src="/admin/relation/relation.js"></script>
+    <script src="/admin/character/character.js"></script>
+  </body>
+</html>
