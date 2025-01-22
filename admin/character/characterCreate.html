@@ -8,31 +8,58 @@
   </head>
   <body>
     <div id="header-container"></div>
-    <div class="profile-container">
-      <div class="profile-image">
-        <img
-          id="preview-image"
-          alt="미리보기 이미지"
-        />
+    <div class="create-container">
+      <section class="image-container">
+        <label for="image-upload">
+          <img src="/image/camera-icon.png" alt="사진 업로드" id="preview" />
+        </label>
         <input type="file" id="image-upload" accept="image/*" />
-      </div>
-      <div class="profile-info">
-        <ul class="info">
-          <li><label>이름</label><input class="info-input" type="text"></li>
-          <li><label>성별</label><input class="info-input" type="text"></li>
-          <li><label>성격</label><input class="info-input" type="text"></li>
-          <li><label>상세내용</label><input class="info-input" type="text"></li>
-          <li><label>관계</label><input class="info-input" type="text"></li>
-          <li><label>만든날짜</label><input class="info-input" type="text"></li>
-          <li><label>만든사람</label><input class="info-input" type="text"></li>
-        </ul>
-      </div>
+      </section>
+      <section class="profile-box">
+        <div class="name-box">
+          <div class="name">
+            MYA-001
+          </div>
+        </div>
+        <div class="basic-info">
+          <p>Basic Information</p>
+          <ul class="create-list">
+            <caption>Gender</caption>
+            <li>
+              <select class="create-selectBox">
+                <option>남자</option>
+                <option>여자</option>
+                <option>기타</option>
+              </select>
+            </li>
+            <caption>
+              Age
+            </caption>
+            <li>
+              <select class="create-selectBox">
+                <option>애기</option>
+                <option>어린이</option>
+                <option>청소년</option>
+                <option>청년</option>
+                <option>중년</option>
+                <option>노년</option>
+                <option>기타</option>
+              </select>
+            </li>
+            <caption>
+              Emotion
+            </caption>
+            <li>
+              <input type="text" class="create-textbox" placeholder="성격을 ‘ , ’로 구분하여 작성해 주세요">
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
-    <div class="button-container">
-      <button class="modifyBtn">생성</button>
-      <button class="deleteBtn">취소</button>
+    <div class="button-zone">
+      <button type="button" class="cancelBtn">Cancel</button>
+      <button type="button" class="createBtn">Create</button>
     </div>
-
     <script src="/admin/character/character.js"></script>
   </body>
 </html>

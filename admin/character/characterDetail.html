@@ -9,22 +9,84 @@
   <body>
     <div id="header-container"></div>
     <div class="profile-container">
-      <div class="profile-image"><img class="profile" src=""></div>
-      <div class="profile-info">
-        <ul class="info">
-          <li><label>이름</label><input class="info-input" type="text"></li>
-          <li><label>성별</label><input class="info-input" type="text"></li>
-          <li><label>성격</label><input class="info-input" type="text"></li>
-          <li><label>상세내용</label><input class="info-input" type="text"></li>
-          <li><label>관계</label><input class="info-input" type="text"></li>
-          <li><label>만든날짜</label><input class="info-input" type="text"></li>
-          <li><label>만든사람</label><input class="info-input" type="text"></li>
-        </ul>
-      </div>
-    </div>
-    <div class="button-container">
-      <button class="modifyBtn">수정</button>
-      <button class="deleteBtn">삭제</button>
+      <section class="image-container">
+        <img
+          class="profile"
+          src="../../image/Exclude.png"
+          alt="프로필 이미지"
+        />
+      </section>
+      <section class="profile-box">
+        <div class="name-box">
+          <div class="name">
+            뽀로로
+            <div class="tag">public</div>
+          </div>
+          <div class="button-container">
+            <button class="modifyBtn">
+              <img src="/image/modify.png" alt="수정" class="btn-icon" />
+            </button>
+            <button class="deleteBtn">
+              <img src="/image/delete.png" alt="삭제" class="btn-icon" />
+            </button>
+          </div>
+        </div>
+        <p class="short-profile">노는게 제일 좋은 뽀로로입니다~</p>
+        <div class="count-box">
+          <div class="like-cnt">
+            <div class="num">100</div>
+            <div class="under-text">Likes</div>
+          </div>
+          <div class="use-cnt">
+            <div class="num">2013</div>
+            <div class="under-text">Used</div>
+          </div>
+          <div class="update-date">
+            <div class="num">25-1-10</div>
+            <div class="under-text">Last Update</div>
+          </div>
+        </div>
+        <hr />
+        <div class="basic-info">
+          <p>Basic Information</p>
+          <ul class="profile-list">
+            <li>
+              <caption>
+                Gender:
+              </caption>
+              남성
+            </li>
+            <li>
+              <caption>
+                Personality:
+              </caption>
+              친근한, 노는게 좋은
+            </li>
+            <li>
+              <caption>
+                Relationships:
+              </caption>
+              친구, 비밀친구
+            </li>
+            <li>
+              <caption>
+                Created At:
+              </caption>
+              Emozi
+            </li>
+          </ul>
+        </div>
+        <div class="discription">
+          <p>Character Description</p>
+          뽀로로 간단 설명입니다.
+        </div>
+        <div class="char-detail">
+          <p>Character Detail</p>
+          뽀로로 간단 설명입니다. 이렇게 작성되는게 맞을껍니다. 뽀로로 간단
+          설명입니다. 이렇게 작성되는게 맞을껍니다.뽀로로 간단 설명입니다.
+          이렇게 작성되는게 맞을껍니다.
+        </div>
+      </section>
     </div>
 
     <script src="/admin/character/character.js"></script>
